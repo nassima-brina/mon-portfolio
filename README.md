@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# Portfolio — Brina Nassima
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personnel développé avec React, Vite, TypeScript et Tailwind CSS dans le cadre du cours **Développement Front-End moderne avec React**.
 
-Currently, two official plugins are available:
+🔗 **Live** : https://mon-portfolio-w88d.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Aperçu
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Portfolio Preview](https://mon-portfolio-w88d.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack technique
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+| Technologie | Rôle |
+|-------------|------|
+| React 18 + TypeScript | Framework UI + typage |
+| Vite | Build tool ultra-rapide |
+| Tailwind CSS v3 | Styles utilitaires |
+| shadcn/ui | Composants accessibles |
+| React Router v6 | Navigation SPA |
+| React Helmet Async | SEO par page |
+| Framer Motion | Animations |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## Pages
+
+- **Home** — Présentation, compétences et liens
+- **Projets** — Projets académiques avec tags et liens GitHub
+- **Parcours** — Compétences transversales et langues
+- **Formations** — Diplômes, cours et timeline
+- **Certifications** — Badges, filtre et liens de vérification
+- **Contact** — Email, téléphone et réseaux sociaux
+
+---
+
+## Lancer en local
+```bash
+git clone https://github.com/nassima-brina/mon-portfolio.git
+cd mon-portfolio
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Ouvre http://localhost:5173 dans ton navigateur.
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+---
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## Scripts
+
+| Commande | Description |
+|----------|-------------|
+| `npm run dev` | Lance le serveur de développement |
+| `npm run build` | Build de production |
+| `npm run preview` | Prévisualise le build local |
+| `npm run lint` | Vérifie le code avec ESLint |
+| `npm run format` | Formate le code avec Prettier |
+
+---
+
+## Structure du projet
 ```
+src/
+├── app/
+│   ├── router.tsx        
+│   └── RootLayout.tsx   
+├── components/
+│   └── ui/              
+├── data/
+│   ├── profile.ts       
+│   ├── projects.ts       
+│   ├── education.ts     
+│   └── certifications.ts 
+└── pages/
+    ├── Home.tsx
+    ├── Projects.tsx
+    ├── Experience.tsx
+    ├── Education.tsx
+    ├── Certifications.tsx
+    └── Contact.tsx
+```
+
+---
+
+## Déploiement
+
+Déployé automatiquement sur **Vercel** à chaque push sur `main`.
+
+---
+
+## Auteur
+
+**Brina Nassima**  
+Étudiante en Licence Systèmes Informatiques Répartis  
+📧 brinanassima59@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/nassima-brina)  
+🐙 [GitHub](https://github.com/nassima-brina)
